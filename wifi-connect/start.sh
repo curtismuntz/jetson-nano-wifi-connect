@@ -12,4 +12,5 @@ else
     ./wifi-connect --portal-interface=wlan0 --portal-ssid TEGRA
 fi
 
+printf 'WiFi-Connect successful.\n'
 sleep infinity

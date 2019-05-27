@@ -1,5 +1,7 @@
 This repo contains an example of how to use [balena's wifi-connect](https://github.com/balena-io/wifi-connect) project from a container to auto-configure your Nvidia Jetson Nano's wifi. Theoretically, this container should be portable to the other Jetson devices (TX1/TX2) but from my testing it will not work out of the box using the built-in Broadcom WiFi chipset on the TX1 and TX2.
 
+This container currently checks if it is able to reach http://google.com for its condition to start the wifi-connect software. In the event google is un-pingable, it will begin hosting its own access point providing the user a location to enter SSID/password credentials. Once configured, it will sleep indefinitely.
+
 # Run manually
 This container can be ran via:
 
@@ -47,3 +49,7 @@ Note that this service calls the compose file from the `/opt/jetson-wifi-connect
 
 This service can then be enabled by: `sudo systemctl enable jetson-wifi-connect`
 
+
+# TODO
+* User providable wifi config checks
+* User providable sleep duration
