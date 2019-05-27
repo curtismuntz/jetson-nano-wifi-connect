@@ -1,0 +1,11 @@
+version: '2'
+services:
+  wifi-connect:
+    # Use the "build" syntax if you want docker compose to build this directory instead of pulling
+    # from dockerhub.
+    # build: ./wifi-connect
+    image: murtis/jetson-nano-wifi-connect
+    network_mode: "host"
+    privileged: true
+    volumes:
+      - /run/dbus:/host/run/dbus/system_bus_socket
