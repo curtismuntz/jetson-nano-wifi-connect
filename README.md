@@ -11,7 +11,7 @@ docker run --rm -it \
       --network=host \
       --name=wifi-connect \
       -v /run/dbus:/host/run/dbus/system_bus_socket \
-      murtis/jetson-nano-wifi-connect
+      murtis/jetson-wifi-connect
 ```
 
 Alternatively, you can add this to your `docker-compose.yml` file and bring up all your containers as part of one command.
